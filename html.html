@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Game Adadhama?</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="js.js"></script>
+</head>
+<body>
+    
+    <!--starting-->
+    <div id="section1">
+    <h1 class="heading">let's start</h1>
+    <button onclick="startgame()"id="button1">START</button>
+    </div>
+
+    <!--USER INPUT FOR NUMBER OF ROUND-->
+    <div id="section2" class="hidden">
+        <h1 class="heading">HOW MANY TIMES 😊</h1>
+        <label for="rounds">NUMBER OF ROUNDS</label>
+        <input type="number"id="round" min="1" required><br><br>
+        <label for="name">NAME:</label>
+        <input type="text" id="name"><BR><BR>
+        <button onclick="play()">LET'S GO🚀</button>
+    </div>
+     
+     
+    <!--USEER SCORE AND OPTIONS-->
+    <div id="section3" class="hidden">
+        <div id="scoresection">
+            <h1>ROUND:<span id="num"></span></h1>
+            <h3>SCORE</h3>
+            <p>USER:<span id="user">0</span></p>
+            <p>COMPUTER:<span id="computer">0</span></p>
+        </div>
+        
+        <div class="container">
+            <img onclick="maingame('rock')" class="image" src="rock.png" alt="rock">
+            <img class="image" onclick="maingame('paper')" src="paper.jpeg" alt="paper">
+            <img class="image" onclick="maingame('scissors')" src="scissor.jpeg" alt="scissors"><br><br>
+            <p>USER:<span id="userans"></span></p><br>
+            <p>COMPUTER:<span id="computerans"></span></p><br>
+            <p>ROUND WINNER:<span id="roundwinner"></span></p><br>
+        </div>
+    </div>
+    <!--WINNER-->
+    <div id="section4" class="hidden">
+        <div class="celebration">
+            <h1 id="head">🎉 Winner of the Game 🎉</h1>
+            <h1 id="winnerofgame"></h1>
+            <div class="fireworks">
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+            </div>
+        <button onclick="restart()">Restart Game</button>
+        </div>
+    </div>
+    <div id="section4"class="hidden">
+        <h1 id="head">winner of the game</h1>
+        <h1 id="winnerofgame"></h1>
+        <button onclick="restart()">restartgame</button>
+    </div>
+</body>
+</html>
